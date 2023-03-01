@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exem.web.backend.dao.BoardDao">
+
+	<!-- 게시판 목록 -->
+	<!-- List<Board> boardList() -->
+	<select id="boardList" resultType="com.exem.web.backend.vo.Board">
+		SELECT boardId, b.userId userId, boardName, boardEditDate, nickname
+		FROM board b JOIN boarduser u ON b.userId = u.userId
+		ORDER BY boardId
+	</select>
+	
+	<!-- 게시판 추가 -->
+	<!-- int boardAdd(Board board) -->
+	<insert id="boardAdd">
+		INSERT INTO board VALUES (boardId.nextval, #{ userId }, #{ boardName }, SYSDATE)
+	</insert>
+	
+	<!-- 게시판 삭제 -->
+	<!-- int boardDel(String boardId) -->
+	<delete id="boardDel">
+		DELETE FROM board
+		WHERE boardId IN
+                <foreach collection="array" item="item" index="index" separator="," open="(" close=")">
+                    #{ item }
+                </foreach>
+	</delete>
+	
+	<!-- 게시판명 가져오기 -->
+	<!-- String getBoardName(int boardId) -->
+	<select id="getBoardName" resultType="String">
+		SELECT boardName
+		FROM board
+		WHERE boardId = #{ boardId }
+	</select>
+	
+	<!-- 게시물 목록 -->
+	<!-- List<Post> postList(int boardId) -->
+	<select id="postList" resultType="com.exem.web.backend.vo.Post">
+		SELECT postId, boardId, p.userId userId, postTitle, postContent, PostWriteDate, PostEditDate, nickname
+		FROM post p JOIN boarduser u ON p.userId = u.userId
+		WHERE boardId = #{ boardId }
+		ORDER BY postId
+	</select>
+	
+	<!-- 게시물 추가 -->
+	<!-- int postAdd(Post post) -->
+	<insert id="postAdd">
+		INSERT INTO post VALUES (postId.nextval, #{ boardId }, #{ userId }, #{ postTitle }, #{ postContent }, SYSDATE, SYSDATE)
+	</insert>
+	
+	<!-- 게시물 수정 -->
+	<!-- int postEdit(Post post) -->
+	<update id="postEdit">
+		UPDATE post
+		SET postTitle = #{ postTitle }, postContent = #{ postContent }, postEditDate = SYSDATE
+		WHERE postId = #{ postId }
+	</update>
+	
+	<!-- 게시물 삭제 -->
+	<!-- int postDel(int postId) -->
+	<delete id="postDel">
+		DELETE FROM post WHERE postId = #{ postId }
+	</delete>
+	
+	<!-- 게시물 가져오기 -->
+	<!-- Post getPost(int postId) -->
+	<select id="getPost" resultType="com.exem.web.backend.vo.Post">
+		SELECT postId, userId, postTitle, postContent
+		FROM post
+		WHERE postId = #{ postId }
+	</select>
+	
+	<!-- 댓글 등록 -->
+	<!-- int commentAdd(Comment comment) -->
+	<insert id="commentAdd">
+		INSERT INTO postcomment VALUES (commentId.nextval, #{ postId }, #{ userId }, #{ comContent })
+	</insert>
+	
+	<!-- 댓글 삭제 -->
+	<!-- int commentDel(int postId) -->
+	<delete id="commentDel">
+		DELETE FROM postcomment WHERE postId = #{ postId }
+	</delete>
+	
+	<!-- 댓글 가져오기 -->
+	<!-- List<Comment> getComment(int postId) -->
+	<select id="getComment" resultType="com.exem.web.backend.vo.Comment">
+		SELECT commentId, c.postId postId, nickname, comContent
+		FROM postcomment c JOIN post p ON c.postId = p.postId 
+				 				  		JOIN boarduser u ON c.userId = u.userId 
+		WHERE c.postId = #{ postId } 
+	</select>
+	
+</mapper>

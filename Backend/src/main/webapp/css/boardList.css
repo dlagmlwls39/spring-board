@@ -1,0 +1,21 @@
+.boardTop, .boardBottom{
+	float: right;
+	margin: 10px 0;
+}
+.boardTop .button, .boardBottom .button{
+	margin-left: 5px;
+}
+table.boardList {
+    margin-bottom: 2px;
+}
+#modalAddBoard{
+	text-align: center;
+}
+.inputBox{
+	margin-bottom: 16px;
+}
+.inner{
+	width: 50%;
+	margin: 0 auto;
+	padding: 15px;
+}
