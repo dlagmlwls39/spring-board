@@ -1,0 +1,84 @@
+.postTop span{
+	float: left;
+}
+.postTop .button{
+	float: right;
+	margin: 0 0 10px 10px;
+}
+#modalAddPost{
+	text-align: center;
+}
+.inputBox{
+	margin: 0 auto;
+}
+.btnBox{
+	text-align: center;
+}
+.inner{
+	width: 90%;
+	margin: 0 auto;
+	padding: 15px;
+}
+.cancel{
+	float: right;
+}
+textarea{
+	width: 98%;
+	height: 100px;
+	margin: 5px 0;
+	resize: none;
+}
+.titleBox{
+	text-align: left;
+}
+.titleBox p{
+ 	display: inline;
+	vertical-align: bottom;
+	padding-left: 40px;
+}
+#modalPostDetail .titleBox p{
+	padding-left: 0;
+}
+.contentBox{
+	width: 600px;
+    margin: 0 auto;
+}
+.commentBox{
+	margin: 15px 0;
+}
+#modalPostDetail .contentBox{
+    margin: 0;
+}
+#detailCon{
+	margin: 0;
+}
+#modalAddPost .contentBox p, #modalEditPost .contentBox p{
+	text-align: left;
+	margin: 10px 0 0 0;
+	padding-left: 3px;
+}
+input#comContent {
+    width: 80%;
+}
+#modalPostDetail .btnBox{
+	text-align: right;
+	margin-top: 30px;
+}
+button#commentAdd {
+    margin: 0 15px;
+}
+table#detailComm, #detailComm td{
+	border: none;
+	font-size: 12px;
+	text-align: left;
+	width: 50%;
+}
+th.details {
+	width: 40%;
+}
+th.title {
+    width: 20%;
+}
+th.writer {
+    width: 10%;
+}
