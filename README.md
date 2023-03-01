@@ -2,8 +2,6 @@
 
 ## :clipboard: 프로젝트 개요
 
-<p align="center"><img src="https://user-images.githubusercontent.com/85548480/217303881-d0f120c6-9e0d-425c-8e77-a1fa1ba816ad.png" width="300" height="230"></p>
-
 <table>
 <tr align="center">
 <td>주제</td>
@@ -28,7 +26,7 @@
 
 ## :pencil: ERD
 
-<p><img src="https://user-images.githubusercontent.com/85548480/222108041-902a3e28-fc2f-4d0b-b02f-1c482fc1c8c4.jpg" width="300" height="230"></p>
+<p><img src="https://user-images.githubusercontent.com/85548480/222108041-902a3e28-fc2f-4d0b-b02f-1c482fc1c8c4.jpg"></p>
 
 
 <br>
