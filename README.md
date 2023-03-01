@@ -33,13 +33,15 @@
 
 ## :computer: 구현 기능
 
-<img src="https://user-images.githubusercontent.com/85548480/222108041-902a3e28-fc2f-4d0b-b02f-1c482fc1c8c4.jpg" width="600px">
+<img src="https://user-images.githubusercontent.com/85548480/222148465-fca6eb86-f5ad-424f-89e6-ea16db819eb1.png" width="300px">
 
-![image](https://user-images.githubusercontent.com/85548480/222148465-fca6eb86-f5ad-424f-89e6-ea16db819eb1.png)
+<img src="https://user-images.githubusercontent.com/85548480/222148503-a66abc1e-f341-4182-87cd-946315052f45.png" width="800px">
 
-![image](https://user-images.githubusercontent.com/85548480/222148503-a66abc1e-f341-4182-87cd-946315052f45.png)
+<img src="https://user-images.githubusercontent.com/85548480/222149062-a4f57c4a-3f56-4032-aeef-4ee4c7d86bc1.png" width="800px">
 
-![image](https://user-images.githubusercontent.com/85548480/222148534-0105ceb1-ceff-44dc-bc6d-bab989ca20f5.png)
+<img src="https://user-images.githubusercontent.com/85548480/222149115-c7827a40-beb9-421e-bc9e-7fc521ad1bf1.png" width="800px">
+
+
 
 
 <br>
