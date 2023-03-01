@@ -1,0 +1,84 @@
+body{
+	margin: 0;
+	padding: 0;
+}
+.content{
+	padding: 0 15px;
+	width: 800px;
+	position: relative;
+}
+.button {
+	color: white;
+	background-color: #5B9BD5;
+	border: #4F88BB;
+	display: inline;
+	padding: 5px 15px;
+	font-size: 14px;
+}
+.button:hover{
+	cursor: pointer;
+}
+.delete{
+	background-color: #A5A5A5 !important;
+	border: #909090 !important;
+}
+a{
+	text-decoration: none;
+	font-size: 12px;
+	color: black;
+}
+.fail{
+	color: red;
+}
+.success{
+	color: green;
+}
+.modal{
+	display: none;
+	width: 90%;
+	margin: 0 auto;
+	position: absolute;
+ 	top: 80%;
+ 	left: 50%;
+ 	transform: translate(-50%, -50%);
+}
+.inner{
+	border: 2px solid #ddd;
+	background-color: white;
+}
+input[type="text"], input[type="password"]{
+	width: 120px;
+}
+table {
+   width: 100%;
+   border: 1px solid #ddd;
+   border-collapse: collapse;
+}
+th, td {
+   border: 1px solid #ddd;
+   padding: 8px;
+   text-align: center;
+}
+td{
+	font-size: 12px;
+}
+.birthInput input{
+	width: 50px;
+}
+.btnBottom{
+	margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 60%;
+}
+.first{
+	padding-left: 35px;
+}
+.first b{
+	color: red;
+	font-weight: normal;
+}
+.second{
+	width: 80%;
+}
