@@ -24,9 +24,9 @@
 
 <br>
 
-## :pencil: ERD
+## :pencil2: ERD
 
-<p><img src="https://user-images.githubusercontent.com/85548480/222108041-902a3e28-fc2f-4d0b-b02f-1c482fc1c8c4.jpg"></p>
+<img src="https://user-images.githubusercontent.com/85548480/222108041-902a3e28-fc2f-4d0b-b02f-1c482fc1c8c4.jpg">
 
 
 <br>
