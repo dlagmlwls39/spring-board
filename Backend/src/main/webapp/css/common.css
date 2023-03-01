@@ -82,3 +82,12 @@ td{
 .second{
 	width: 80%;
 }
+.main{
+	font-size: 14px;
+}
+.main:hover{
+	text-decoration-line: underline;
+}
+h2 {
+    margin: 5px 0;
+}

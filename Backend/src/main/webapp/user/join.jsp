@@ -25,7 +25,7 @@
 </style>
 <body>
 <div class="content">
-	<a href="/web/index.htm">메인 페이지</a>
+	<a href="/web/index.htm" class="main">메인 페이지로 돌아가기</a>
 	
 	<form action="" id="joinForm" method="post">
 		<h2>회원가입</h2>
@@ -119,7 +119,11 @@
 				alert("아이디 중복 확인을 해주세요.");
 			}else if($("#idValid").val() == 0){
 				alert("유효한 아이디를 입력해주세요.");
+			}else if($("#password").val() == "" || $("#nickname").val() == "" || 
+					$("#year").val() == "" || $("#month").val() == "" || $("#date").val() == ""){
+				alert("필수 입력 사항을 모두 입력해주세요.");
 			}else{
+				alert("회원가입이 완료되었습니다.");
 				$("#joinForm").submit();
 			} 
 		});

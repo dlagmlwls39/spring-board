@@ -31,7 +31,7 @@
 </style>
 <body>
 <div class="content">
-	<a href="/web/index.htm">메인 페이지</a>
+	<a href="/web/index.htm" class="main">메인 페이지로 돌아가기</a>
 
 	<form action='<c:url value="/j_spring_security_check" />' method="post">
 		<h2>로그인</h2>

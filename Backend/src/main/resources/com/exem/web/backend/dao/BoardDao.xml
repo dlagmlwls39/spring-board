@@ -91,7 +91,8 @@
 		SELECT commentId, c.postId postId, nickname, comContent
 		FROM postcomment c JOIN post p ON c.postId = p.postId 
 				 				  		JOIN boarduser u ON c.userId = u.userId 
-		WHERE c.postId = #{ postId } 
+		WHERE c.postId = #{ postId }
+		ORDER BY commentId 
 	</select>
 	
 </mapper>

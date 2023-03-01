@@ -12,7 +12,7 @@
 <style>
 .userInfo{
 	width: 40%;
-    margin: 0 auto;
+    margin: 0 100px;
     border: none;
 }
 .userInfo td{
@@ -23,15 +23,17 @@
 .userInfoBottom{
 	text-align: center;
 	margin: 15px 0;
+	width: 60%;
 }
 .userInfoBottom .button{
 	margin-left: 5px;
 }
+.first {
+    padding-left: 4px;
+}
 </style>
 <body>
 <div class="content">
-	<a href="/web/index.htm">메인 페이지</a>
-	
 	<form action="" id="userInfoForm" method="post">
 		<h2>회원정보수정</h2>
 		<table class="userInfo">
@@ -41,15 +43,15 @@
 					<td>${ user.userId }</td>
 				</tr>
 				<tr>
-					<td>비밀번호</td>
+					<td class="first"><b>*</b>비밀번호</td>
 					<td><input type="password" id="password" name="password"></td>
 				</tr>
 				<tr>
-					<td>별명</td>
+					<td class="first"><b>*</b>별명</td>
 					<td><input type="text" id="nickname" name="nickname" value="${ user.nickname }"></td>
 				</tr>
 				<tr>
-					<td>생년월일</td>
+					<td class="first"><b>*</b>생년월일</td>
 					<td class="birthInput">
 						<input type="text" id="year" name="year" value="${ fn:substring(user.birth, 0, 4) }">년 
 						<input type="text" id="month" name="month" value="${ fn:substring(user.birth, 5, 7) }">월 
@@ -77,8 +79,9 @@
 			var birth = year + "-" + month + "-" + date;
 			$("#birth").val(birth);
 		 	 
-			if($("#password").val() == ""){
-				alert("비밀번호를 입력해주세요.");
+			if($("#password").val() == "" || $("#nickname").val() == "" || 
+				$("#year").val() == "" || $("#month").val() == "" || $("#date").val() == ""){
+				alert("필수 입력 사항을 모두 입력해주세요.");
 				event.preventDefault();
 			}else{
 				alert("회원정보가 수정되었습니다.");
