@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.exem.web.backend.dao.UserDao">
+	
+	<!-- 회원정보 가져오기 -->
+	<!-- User getUser(String userId) -->
+	<select id="getUser" resultType="com.exem.web.backend.vo.User">
+		SELECT * 
+		FROM boarduser 
+		WHERE userId = #{ userId }
+	</select>
+	
+	<!-- 회원가입 -->
+	<!-- int join(User user) -->
+	<insert id="join">
+		INSERT INTO boarduser (userId, password, nickname, birth, isWithdrawal) 
+		VALUES (#{ userId }, #{ password }, #{ nickname }, #{ birth }, 0)
+	</insert>
+
+	<!-- 아이디 중복 확인 -->
+	<!-- int checkId(String userId) -->
+	<select id="checkId" resultType="int">
+		SELECT COUNT(*)
+		FROM boarduser
+		WHERE userId = #{ userId }
+	</select>
+	
+	<!-- 회원정보수정 -->
+	<!-- int editUser(User user) -->
+	<update id="editUser">
+		UPDATE boarduser
+		SET password = #{ password }, nickname = #{ nickname }, birth = #{ birth }
+		WHERE userId = #{ userId }
+	</update>
+	
+	<!-- 회원탈퇴 -->
+	<!-- int delUser(String userId) -->
+	<update id="delUser">
+		UPDATE boarduser
+		SET isWithdrawal = 1
+		WHERE userId = #{ userId }
+	</update>
+	
+</mapper>
